@@ -52,11 +52,6 @@ source:
     ###########################################################################################
     - fix_except_decl.diff
 
-    #########################################################################
-    # Interpreter is statically linked on macOS so do not use `libpython`.  #
-    #########################################################################
-    - ignore_libpython_macos.diff
-
 build:
   skip: true  # [win and py<35]
   number: 1007
