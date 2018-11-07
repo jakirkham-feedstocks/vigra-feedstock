@@ -4,7 +4,7 @@ EXTRA_CMAKE_ARGS=""
 if [[ `uname` == 'Darwin' ]];
 then
     EXTRA_CMAKE_ARGS="-DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET}"
-    export LDFLAGS="${LDFLAGS} -Wl,-bundle_loader,${PYTHON}"
+    export LDFLAGS="${LDFLAGS} -Wl,-bundle,-bundle_loader,${PYTHON}"
 else
     export CXXFLAGS="-pthread ${CXXFLAGS}"
 fi
